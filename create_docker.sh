@@ -1,5 +1,3 @@
-#!/bin/bash
-
 echo ""
 echo "============================================================"
 echo "   INICIANDO A CONTAINERIZAÇÃO DO PROJETO MOTTU "
@@ -10,6 +8,18 @@ cd net-docker
 cd deploy
 
 CAMINHO=$(pwd)
+
+#!/bin/bash
+
+echo "credenciais Oracle:"
+read -p "RM: " ID
+read -s -p "Senha: " PASSWORD
+echo ""
+
+# Substitui as variáveis no appsettings.json e salva como appsettings.final.json
+export ID
+export PASSWORD
+envsubst < appsettings.template.json > appsettings.json
 
 echo ""
 echo "🔵 Criando a rede virtual 'mottu-net'"
@@ -22,13 +32,11 @@ echo " 📦 Criando Imagem personalizada da aplicação ASP.NET 'mottu-oracle'"
 echo "============================================================"
 docker build -t mottu-oracle .
 
-
 echo ""
 echo "============================================================"
 echo " 📦 Criando container da aplicação ASP.NET 'mottu-oracle'"
 echo "============================================================"
-docker run -d -p 8080:8080 --name mottu-oracle mottu-oracle
-
+docker run -d -p 8080:8080 -v $CAMINHO:/app --name mottu-oracle mottu-oracle
 
 echo ""
 echo "============================================================"
