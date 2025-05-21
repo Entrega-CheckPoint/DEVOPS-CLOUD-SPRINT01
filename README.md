@@ -1,4 +1,4 @@
-# DEVOPS-CLOUD-SPRINT01
+# $DEVOPS-CLOUD-SPRINT01$
 
 ## **Objetivo**
 
@@ -186,7 +186,7 @@ Ao se fazer o `publish` da aplicação, você diz "_Compila tudo e me retorna a 
 dotnet publish -c Release -o ./deploy
 ```
 
-Aplicação já está configurada para conectar externamente à FIAP (oracle.fiap.com.br:1521/orcl)
+Aplicação já está configurada para conectar externamente à oracle
 
 Isso funciona direto com internet, sem necessidade de rodar um Oracle dentro da VM.
 
