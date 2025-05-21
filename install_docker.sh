@@ -5,10 +5,10 @@ echo "============================================================"
 echo ""
 
 echo "🔄 Atualizando pacotes..."
-sudo apt update -y && sudo apt upgrade -y
+sudo yum update -y && sudo yum upgrade -y
 
 echo "🐳 Instalando Docker..."
-sudo apt install -y docker.io
+sudo yum install -y docker.io
 
 echo "📦 Ativando o serviço do Docker..."
 sudo systemctl enable docker
