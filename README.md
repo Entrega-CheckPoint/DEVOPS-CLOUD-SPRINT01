@@ -24,6 +24,8 @@ Para isso temos que:
 
 Para uso da aplicação ASP.NET, foi criado uma maquina virtual Linux que terá o Docker instalado e receberá a nossa imagem personalizada.
 
+![arquitetura](arquitetura.jpg)
+
 > Todo o desenvolvimento ocorre feio por azure CLI e comandos automatizados por shell script.
 
 ### **Criar a VM**
