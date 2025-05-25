@@ -1,5 +1,8 @@
 # $DEVOPS-CLOUD-SPRINT01$
 
+[Link do Video](https://www.youtube.com/watch?v=XPCAeRilNPI)
+
+
 ## **Objetivo**
 
 Desenvolver uma aplicação que faça a leitura de um IOT anexo nas motos da MOTTU, e por meio da conexão WI-FI, triangular a localização dela nos patios.
@@ -8,8 +11,10 @@ Em ASP.NET, será implementado 2 funções:
 
 1. Produção de API RESTful, para relacionamento com o banco de dado ORACLE.
 2. Arquitetura MVC que retorna as entidade em formato de tabela com as funções do CRUD.
-3. Criar **Grupo de Recursos** e **VM** na Microsoft Azure.
-4. Containização da aplicação em VM Linux.
+
+Para isso temos que:
+- Criar **Grupo de Recursos** e **VM** na Microsoft Azure.
+- Containização da aplicação em VM Linux.
 
 > Ao terminar os testes o grupo de recursos sera excluído.
 
@@ -43,7 +48,7 @@ az vm create \
     --accept-term \
     --additional-events false \
     --admin-password Mottu@2tdsvms \
-    --admin-username admMottu \
+    --admin-username admmottu \
     --authentication-type password \
     --computer-name mottu-01 \
     --enable-agent true \
@@ -300,7 +305,6 @@ CREATE TABLE T_CM_PATIO
 | PUT    | `/api/PatioApi/{id}` | Atualiza pátio        |
 | DELETE | `/api/PatioApi/{id}` | Remove pátio          |
 
-![API](./img/API's.png)
 
 > https://ip_VM:xxxx/swagger — documentação da API
 
@@ -329,7 +333,7 @@ https://github.com/Entrega-CheckPoint/DEVOPS-CLOUD-SPRINT01
 Ao se terminar a simulação, foi excluído todo o grupo de recursos.
 
 ```sh
-az group delete --name rg-test -y
+az group delete --name rg-mottu -y
 ```
 
 ### **Limpar o Docker**

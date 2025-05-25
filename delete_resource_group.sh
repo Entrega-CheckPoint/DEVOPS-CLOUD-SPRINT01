@@ -1,2 +1,2 @@
 # Deletar o Resource Group (destrói tudo dentro)
-az group delete --name rg-test -y 
+az group delete --name rg-mottu -y 
