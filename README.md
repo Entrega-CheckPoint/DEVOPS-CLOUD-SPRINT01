@@ -190,8 +190,6 @@ Aplicação já está configurada para conectar externamente à oracle
 
 Isso funciona direto com internet, sem necessidade de rodar um Oracle dentro da VM.
 
-
-
 ### **Iniciar o container que irá rodar em segundo plano**
 
 ```sh
@@ -313,7 +311,6 @@ CREATE TABLE T_CM_PATIO
 Foi criado um modelo CRUD, Create, Read, Update, Delete para "Filial" e "Patio".
 
 ![Link do video](link do video)
-
 
 ## **Como rodar o projeto**
 

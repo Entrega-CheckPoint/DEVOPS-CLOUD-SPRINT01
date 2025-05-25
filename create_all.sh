@@ -15,7 +15,7 @@ az vm create \
     --accept-term \
     --additional-events false \
     --admin-password Mottu@2tdsvms \
-    --admin-username admMottu \
+    --admin-username admmottu \
     --authentication-type password \
     --computer-name mottu-01 \
     --enable-agent true \
